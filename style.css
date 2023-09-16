@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+  flex-wrap: wrap;
+}
+nav .logo img{
+  width: 50px;
+  height: 50px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: rgb(129, 129, 129);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li input{
+    border: 2px solid  rgb(129, 129, 129);
+    padding:3px 0px 3px 10px;
+    border-radius: 25px;
+   
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111; ;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+#intro{
+    background-image: url(intro-img.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20vh 30vh;
+   
+   
+}
+#intro h1{
+    font-size: 45px;
+    color: rgba(255, 150, 22, 0.712);
+}
+
+#intro button{
+    padding: 3px 15px;
+    border: 2px solid #111;
+    border-radius: 20px;
+    font-weight: 500;
+   
+}
+#letsGo{
+    margin: 50px;
+}
+#letsGo button{
+    padding: 10px 55px;
+    border: none;
+    border-radius: 25px;
+    background-color: #7f7770;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+   margin: 0 auto;
+   display: block;
+   letter-spacing: 0.25em
+    
+}
+
+#letsGo h2 , .p2   {
+ text-align: center;
+}
+#letsGo h2{
+    color:  rgba(255, 150, 22, 0.712) ;
+    font-size: 33px;
+}
+
+.card{
+    display: flex;
+    
+   justify-content: space-between;
+   margin: 4%  13%;
+
+  
+    
+}
+.card .item img{
+   width: 220px;
+   height: 230px;
+  
+}
+.card .item{
+    width: 220px;
+}
+
+.card .item{
+    background-color: #7f7770;
+   
+   
+    
+}
+.card .item .card-detail{
+    padding: 15px 15px;
+    color: #fff;
+}
+
+
+#discount{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    background-color: #7f7770;
+}
+
+#discount #dis-text{
+
+    
+    color: #fff;
+    padding: 30vh 10vh;
+}
+
+#discount #dis-text h2{
+    font-size: 30px;
+}
+#discount #dis-text p{
+    font-size: 18px;
+    margin: 25px 0px;
+}
+
+
+#discount #dis-text button{
+    padding: 8px 45px;
+    border-radius: 25px;
+    border: none;
+    background-color: #e2a355;
+    color: #fff;
+    letter-spacing: 0.25em
+}
+
+#promo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 600px;
+    background-color: #deb37e;
+}
+
+
+
+#promo #promo-text{
+
+    
+    color: #fff;
+    padding: 30vh 26vh;
+}
+
+#promo #promo-text h2{
+    font-size: 30px;
+}
+#promo #promo-text p{
+    font-size: 18px;
+    margin: 25px 0px;
+}
+
+
+#promo #promo-text button{
+    padding: 8px 45px;
+    border-radius: 25px;
+    border: none;
+    background-color: #e2a355;
+    color: #fff;
+    letter-spacing: 0.25em
+}
+
+
+#mountain{
+    background-image: url(final.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40vh 50vh;
+    text-align: center;
+    color: #fff;
+
+}
+#mountain h3{
+    font-size: 28px;
+}
+#mountain p{
+    font-size: 14px;
+}
+
+#hiking{
+    background-image: url(hiking.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+    padding-right: 30vh;
+   
+    
+    color: #111;
+    text-align: end;
+
+}
+#hiking h3{
+    font-size: 35px;
+   
+    letter-spacing:0.25em ;
+}
+
+ #hiking-heading{
+    color: #deb37e;
+ }
+
+ #hiking-derails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 10vh 20;
+
+ }
+ #hiking-derails .item{
+    width: 300px;
+ }
+ #hiking-derails .item h4{
+    color: #deb37e;
+ }
+
+ #quotes{
+    text-align: center;
+    padding: 15vh 0px;
+    background-image: url(background-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ #quotes h3{
+    font-size: 45px;
+ }
+  #name{
+    padding: 20px 0px;
+    font-size: 16px;
+     color: rgb(187, 187, 187);
+ }
+  #email-area{
+    text-align: center;
+    padding: 25vh 0vh;
+    line-height: 1.5;
+    background-image: url(copy.jpg);
+  }
+  #email-area h4{
+    font-size: 42px;
+    font-weight: 400;
+    color: #fff;
+  }
+  #email-area p{
+    font-size: 14px;
+    padding: 40px 0px;
+  }
+  #email-area input{
+   outline: none;
+   border: none;
+    border-radius: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 180px;
+    margin-right: 0px;
+    
+  }
+  #email-area button{
+    padding: 8px 30px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    position: relative;
+    left:-30px;
+    background-color: #111;
+    color: #fff;
+       
+  }
+  #footer{
+    background-image: url(footer.jpg);
+    background-size: cover;
+   display: flex;
+   justify-content: space-between;
+   padding:30vh 16vh;
+   color: #fff;
+   line-height: 2;
+  }
+  .footer-item h3{
+    font-size: 28px;
+    font-weight: 400;
+  }
+ 
+  .footer-item p, ul {
+    list-style: none;
+    font-size: 12px;
+    
+  }
+
+   .footer-icon {
+    border:1px solid #111;
+   padding: 5px;
+   margin: 5px;
+  }
+
+ .footer-item .footer-heading{
+    font-size: 20px;
+    font-weight: 300;
+  }
